@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 const WelcomePage  = () => {
+    const navigate = useNavigate();
     return (
         <div className="box textcenter">
-            <h1>Welcome to Quiz Challenge</h1>
-            <div>
+            <h1 className="title">Welcome to Quiz Challenge</h1>
+            <div className="description">
                 <p>You will be presented 3 MCQs</p>
                 <p>Can you score 100%?</p>
             </div>
-            <button>
+            <button className="btn" onClick={() => navigate("/quiz")}>
                 Start Quiz
             </button>
 
